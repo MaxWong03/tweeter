@@ -1,0 +1,55 @@
+.tweet{
+  border:  3px solid #545149 ;
+  position: relative;
+  height: 250px;
+  width: 100%;
+}
+
+.tweet header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 40%;
+}
+
+.tweet header img {
+  width: 8%;
+  height: 100%;
+  float: left;
+  margin: 5px 15px 0px 10px;
+
+}
+
+.tweet header p {
+  margin-top: 35px;
+}
+
+.tweet header small {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+.tweet > p {
+  position: absolute;
+  top: 100px;
+  left: 40px;
+
+}
+
+.tweet footer{
+  position: absolute;
+  height: 20%;
+  width: 100%;
+  bottom: 0;
+}
+
+.tweet footer small {
+  position: absolute;
+  left: 30px;
+  bottom: 20px;
+}
+
+.tweet footer .reaction {
+
+}
