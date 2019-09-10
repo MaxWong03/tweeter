@@ -1,15 +1,27 @@
 .tweet{
-  border:  3px solid #545149 ;
-  position: relative;
-  height: 250px;
+  border: 3px solid #545149 ;
   width: 100%;
+  margin-bottom: 30px;
+}
+
+
+.tweet:hover {
+  box-shadow: 10px 10px #4056A1;
+}
+
+.tweet .hide {
+  visibility: hidden;
+}
+.tweet:hover .hide{
+  visibility: visible;
+}
+
+.tweet .light-font{
+  font-
 }
 
 .tweet header {
-  position: absolute;
-  top: 0;
   width: 100%;
-  height: 40%;
 }
 
 .tweet header img {
@@ -20,36 +32,30 @@
 
 }
 
-.tweet header p {
-  margin-top: 35px;
+.userInfo{
+  padding-top: 40px;
 }
 
 .tweet header small {
-  position: absolute;
-  right: 30px;
-  top: 30px;
+  font-size: 25px;
+  float: right;
+  padding-right: 30px;
+  color: rgb(184, 184, 184);
 }
 
-.tweet > p {
-  position: absolute;
-  top: 100px;
-  left: 40px;
-
+.tweet .tweet-text {
+  margin-top: 30px;
+  width: 98%;
+  border-bottom: 3px solid #545149 ;
+  transform: translateX(1%);
+  padding: 10px;
 }
 
 .tweet footer{
-  position: absolute;
-  height: 20%;
   width: 100%;
-  bottom: 0;
-}
-
-.tweet footer small {
-  position: absolute;
-  left: 30px;
-  bottom: 20px;
+  padding: 30px;
 }
 
 .tweet footer .reaction {
-
+  float: right;
 }
