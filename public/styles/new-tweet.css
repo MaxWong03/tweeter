@@ -1,0 +1,36 @@
+input, span {
+  font-family: 'Bungee', sans-serif;
+}
+
+input {
+  background-color: #4056A1;
+  color: #ffffff;
+}
+
+textarea {
+  border-bottom: 5px solid #545149 ;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  resize: none;
+  background-color: #f4f1ec;
+  width: 100%;
+  height: 55px;
+  font-weight: 600;
+}
+
+
+
+.counter, [type="submit"] {
+  position: absolute;
+  margin-top: 75px;
+}
+
+.counter {
+  right: 0;
+}
+
+[type="submit"] {
+  left: 0;
+  border: none;
+}

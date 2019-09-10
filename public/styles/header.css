@@ -2,7 +2,8 @@ header {
   margin-top: 120px;
   height: 400px;
   width: 100%;
-  background-color: rgba(240, 160, 11, 0.945);
+  background-color: #a32110;
+  background-image: url("https://www.transparenttextures.com/patterns/dust.png");
   position: relative;
 }
 
