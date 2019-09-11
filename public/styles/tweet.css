@@ -16,6 +16,14 @@
   visibility: visible;
 }
 
+.tweet .light {
+  opacity: 0.6;
+}
+
+.tweet:hover .light{
+  opacity: 1;
+}
+
 .tweet header {
   width: 100%;
 }

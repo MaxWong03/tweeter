@@ -51,18 +51,18 @@ const createTweetElement = (tweetObj) => {
   const timeStamp = tweetObj.created_at;
   return `<article class="tweet">
   <header>
-    <img class="avatar" src="${avatars}">
+    <img class="avatar light" src="${avatars}">
     <div class="userInfo">
-      <span>${name}</span>
+      <span class="light">${name}</span>
       <small class="user-handle hide">${handle}</small>
     </div>
   </header>
   <div class="tweet-text">
-    <p>${text}</p>
+    <p class="light">${text}</p>
   </div>
   <footer>
-    <small class=>${timeStamp}</small>
-    <span class="reaction">
+    <small class=light>${timeStamp}</small>
+    <span class="reaction light">
       <i class="fas fa-flag"></i>
       <i class="fas fa-retweet"></i>
       <i class="fas fa-heart"></i>
