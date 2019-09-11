@@ -4,54 +4,48 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-/**
- * <article class="tweet">
-       <header>
-         <img class="avatar" src="/images/profile-hex.png">
-         <div class="userInfo">
-           <span>name</span>
-           <small class="user-handle hide">@maxtweet</small>
-         </div>
-       </header>
-       <div class="tweet-text">
-         <p>OMG I made this tweet</p>
-       </div>
-       <footer>
-         <small class=>10 days ago</small>
-         <span class="reaction">
-           <i class="fas fa-flag"></i>
-           <i class="fas fa-retweet"></i>
-           <i class="fas fa-heart"></i>
 
-         </span>
-       </footer>
-     </article>
- */
+const data = [
+  {
+    "user": {
+      "name": "Newton",
+      "avatars": "https://i.imgur.com/73hZDYK.png"
+      ,
+      "handle": "@SirIsaac"
+    },
+    "content": {
+      "text": "If I have seen further it is by standing on the shoulders of giants"
+    },
+    "created_at": 1461116232227
+  },
+  {
+    "user": {
+      "name": "Descartes",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@rd" },
+    "content": {
+      "text": "Je pense , donc je suis"
+    },
+    "created_at": 1461113959088
+  }
+];
 
-const tweetData = {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
-    "handle": "@SirIsaac"
-  },
-  "content": {
-    "text": "If I have seen further it is by standing on the shoulders of giants"
-  },
-  "created_at": 1461116232227
+
+const renderTweets = (tweets) => {
+  for (let tweet of tweets) {
+    const $tweet = createTweetElement(tweet);
+    $('#tweet-container').append($tweet);
+  }
 };
 
-/**
- * 
- * @param {Object} tweetObj 
- * @return tweet <article> element  containing the entire HTML structure of the tweet
- */
+
 const createTweetElement = (tweetObj) => {
   const {name, avatars, handle} = tweetObj.user;
   const {text} = tweetObj.content;
   const timeStamp = tweetObj.created_at;
   return `<article class="tweet">
   <header>
-    <img class="avatar light" src="${avatars}">
+    <img class="avatar light" src=${avatars}>
     <div class="userInfo">
       <span class="light">${name}</span>
       <small class="user-handle hide">${handle}</small>
@@ -61,7 +55,7 @@ const createTweetElement = (tweetObj) => {
     <p class="light">${text}</p>
   </div>
   <footer>
-    <small class=light>${timeStamp}</small>
+    <small class=light>${Math.round((Date.now() - new Date(timeStamp)) / (1000 * 60 * 60 * 24))} Days Ago</small>
     <span class="reaction light">
       <i class="fas fa-flag"></i>
       <i class="fas fa-retweet"></i>
@@ -73,9 +67,6 @@ const createTweetElement = (tweetObj) => {
 };
 
 
-const $tweet = createTweetElement(tweetData);
 $(document).ready(function() {
-  $('#tweet-container').append($tweet);
-  $('#tweet-container').append($tweet);
-
+  renderTweets(data);
 });
