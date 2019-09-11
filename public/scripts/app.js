@@ -3,10 +3,6 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
-
-
-
 $(() => {
   const validateForm = (formText) => {
     if (!formText.length) {
@@ -56,35 +52,6 @@ $(() => {
     return $('<article>').addClass('tweet').append(header, tweetContainer.append(tweetText), footer);
   };
 
-  /**
-   * `<article class="tweet">
-    <header>
-      <img class="avatar light" src=${avatars}>
-      <div class="userInfo">
-        <span class="light">${name}</span>
-        <small class="user-handle hide">${handle}</small>
-      </div>
-    </header>
-    <div class="tweet-text">
-      <p class="light">${text}</p>
-    </div>
-    <footer>
-      <small class=light>${Math.round((Date.now() - new Date(timeStamp)) / (1000 * 60 * 60 * 24))} Days Ago</small>
-      <span class="reaction light">
-        <i class="fas fa-flag"></i>
-        <i class="fas fa-retweet"></i>
-        <i class="fas fa-heart"></i>
-  
-      </span>
-    </footer>
-  </article>`;
-   */
-
-  /**
-   * Problem
-   * 1) newest tweet have to show up first
-   * 2) need to refetch tweets on submission (without reloading the page)
-   */
   const loadTweets = () => {
     $.ajax('/tweets', { method: "GET" })
       .then(renderTweets);

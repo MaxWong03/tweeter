@@ -14,3 +14,13 @@ nav span {
   font-family: 'Bungee', sans-serif;
   color: #ffffff;
 }
+
+#make-tweet, .fa-angle-double-down{
+  float: right;
+  margin-right: 50px;
+}
+
+.fa-angle-double-down {
+  margin-right: 170px;
+  color: rgba(255, 166, 0, 0.829);
+}
