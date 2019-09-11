@@ -21,10 +21,12 @@ $(() => {
   };
 
   const renderTweets = (tweets) => {
+    const tweetArr = [];
     for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $('#tweet-container').append($tweet);
+      tweetArr.push($tweet);
     }
+    $('#tweet-container').empty().append(tweetArr);
   };
 
   const createTweetElement = (tweetObj) => {
@@ -75,9 +77,8 @@ $(() => {
       $.ajax('/tweets', {
         method: "POST",
         data: form.serialize()
-      }).then(tweet => {
-        const $newTweet = createTweetElement(tweet);
-        $('#tweet-container').prepend($newTweet);
+      }).then(() => {
+        loadTweets();
       });
     }
   });
