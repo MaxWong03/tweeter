@@ -7,7 +7,18 @@
 
 
 
-$(document).ready(function () {
+$(() => {
+  const validateForm = (formText) => {
+    if (!formText.length) {
+      alert('Don\'t try to submit a empty tweet 🙄');
+      return false;
+    }
+    if (formText.length > 140) {
+      alert('Your tweet is wayyyyyy too long 😓');
+      return false;
+    }
+    return true;
+  };
 
   const renderTweets = (tweets) => {
     for (let tweet of tweets) {
@@ -43,11 +54,32 @@ $(document).ready(function () {
   </article>`;
   };
 
+
+  /**
+   * Problem
+   * 1) newest tweet have to show up first
+   * 2) need to refetch tweets on submission (without reloading the page)
+   */
   const loadTweets = () => {
     $.ajax('/tweets', { method: "GET" })
       .then(renderTweets);
   };
 
   loadTweets();
+
+  const form = $('form');
+  form.on('submit', (event) => {
+    event.preventDefault();
+    const typedText = form.children('textarea').val();
+    if (validateForm(typedText)) {
+      $.ajax('/tweets', {
+        method: "POST",
+        data: form.serialize()
+      }).then(tweet => {
+        const $newTweet = createTweetElement(tweet);
+        $('#tweet-container').prepend($newTweet);
+      });
+    }
+  });
   
 });
