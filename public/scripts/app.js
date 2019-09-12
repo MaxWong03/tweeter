@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(() => {
+  
   const validateForm = (formText) => {
     const errorMessage = $('.error');
     if (!formText.length) {
@@ -33,8 +34,10 @@ $(() => {
     const { name, avatars, handle } = tweetObj.user;
     const { text } = tweetObj.content;
     const timeStamp = tweetObj.created_at;
+    const gender = tweetObj.gender;
+    const article = $(`<article class="${gender}">`);
     const header =
-      `<header>
+      `<header class="${gender}">
       <img class="avatar light" src=${avatars}>
       <div class="userInfo">
         <span class="light">${name}</span>
@@ -42,9 +45,9 @@ $(() => {
       </div>
     </header>`;
     const footer =
-      `<footer>
-    <small class=light>${Math.round((Date.now() - new Date(timeStamp)) / (1000 * 60 * 60 * 24))} Days Ago</small>
-    <span class="reaction light">
+      `<footer >
+    <small class="light ${gender}">${Math.round((Date.now() - new Date(timeStamp)) / (1000 * 60 * 60 * 24))} Days Ago</small>
+    <span class="reaction light ${gender}">
       <i class="fas fa-flag"></i>
       <i class="fas fa-retweet"></i>
       <i class="fas fa-heart"></i>
@@ -53,7 +56,7 @@ $(() => {
     </footer>`;
     const tweetContainer = $('<div>').addClass('tweet-text');
     const tweetText = $('<p>').addClass('light').text(text);
-    return $('<article>').addClass('tweet').append(header, tweetContainer.append(tweetText), footer);
+    return article.addClass('tweet').append(header, tweetContainer.append(tweetText.addClass(gender)), footer);
   };
 
   const loadTweets = () => {
@@ -72,6 +75,7 @@ $(() => {
         method: "POST",
         data: form.serialize()
       }).then(() => {
+        form.children('textarea').val('');
         loadTweets();
       });
     }

@@ -1,13 +1,13 @@
 i.fa-angle-double-up{
   display:none;
-  background: #4056a1;
+  background: rgb(175, 178, 209);
   padding: 20px;
   border-radius: 50%;
   width: 90px;
   color: white;
   text-align: center;
   position: sticky;
-  top: 90%;
+  top: 87%;
   float: right;
 }
 

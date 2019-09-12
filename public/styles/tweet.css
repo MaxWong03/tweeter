@@ -1,11 +1,8 @@
 .tweet{
-  border: 3px solid #545149 ;
+  border: 3px solid #5E6572 ;
   width: 100%;
   margin-bottom: 30px;
-}
-
-.tweet:hover {
-  box-shadow: 10px 10px 20px #4056A1;
+  transition: box-shadow 0.3s;
 }
 
 .tweet .hide {
@@ -45,7 +42,7 @@
 .tweet .tweet-text {
   margin-top: 30px;
   width: 98%;
-  border-bottom: 3px solid #545149 ;
+  border-bottom: 3px solid #5E6572 ;
   transform: translateX(1%);
   padding: 10px;
   overflow: scroll;

@@ -41,7 +41,8 @@ module.exports = {
     return {
       name: userName,
       handle: userHandle,
-      avatars: userAvatar
+      avatars: userAvatar,
+      gender: gender
     };
   }
 };

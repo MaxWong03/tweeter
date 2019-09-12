@@ -6,13 +6,13 @@ nav {
   height: 120px;
   width: 100vw;
   z-index: 3;
-  background-color: #4056A1;
+  background-color: rgb(238, 209, 192);
   padding: 1.5em;
 }
 
 nav span {
   font-family: 'Bungee', sans-serif;
-  color: #ffffff;
+  color: #f7f7f7;
 }
 
 #make-tweet, .fa-angle-double-down{
@@ -24,7 +24,7 @@ nav span {
 
 .fa-angle-double-down {
   margin-right: 150px;
-  animation: upDown 2.5s infinite;
+  animation: upDown 1.5s infinite;
   cursor: pointer;
 }
 
