@@ -9,9 +9,19 @@ input, span {
 input {
   background-color: rgb(166, 169, 201);
   color: #ffffff;
+  padding: 8px;
+  border-radius: 5px;
 }
 input:hover{
   cursor: pointer;
+  outline: none;
+  animation: enlarge 2s infinite
+}
+
+@keyframes enlarge{
+  0% {padding: 8px}
+  50% {padding: 13px}
+  100% {padding: 8px}
 }
 
 textarea {
