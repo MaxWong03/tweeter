@@ -11,3 +11,6 @@ i.fa-angle-double-up{
   float: right;
 }
 
+i.fa-angle-double-up:hover{
+  cursor: pointer;
+}

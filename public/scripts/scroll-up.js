@@ -20,5 +20,9 @@ $(() => {
     else toggleNav(makeTweetText, downArrow, scrollUp, 'hide'); //here
     
   });
-  scrollUp.on('click', () => form.slideDown());
+  scrollUp.on('click', () => {
+    form.slideDown();
+    $('html').animate({ scrollTop: 0 }, 'slow');
+    $('textarea').focus();
+  });
 });

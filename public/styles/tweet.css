@@ -45,7 +45,7 @@
   border-bottom: 3px solid #5E6572 ;
   transform: translateX(1%);
   padding: 10px;
-  word-wrap: break-word;
+  word-wrap: break-word{};
 }
 
 .tweet footer{

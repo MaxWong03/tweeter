@@ -1,0 +1,28 @@
+@media only screen and (min-width: 1024px) {
+
+ body {
+   display: flex;
+ } 
+
+ header {
+  place-self: flex-start;
+ }
+
+header#profile{
+  position: sticky;
+  top: 300px;
+  background-size: 50% 50%;
+  margin-right: 8em;
+  margin-left: 8em;
+}
+
+ .container{
+   position: initial;
+   transform: initial;
+   margin-top: 150px;
+   margin-right: 3em;
+ }
+ .new-tweet{
+   margin-top: 25px;
+ }
+}
