@@ -5,14 +5,18 @@
  */
 $(() => {
   const validateForm = (formText) => {
+    const errorMessage = $('.error');
     if (!formText.length) {
-      alert('Don\'t try to submit a empty tweet 🙄');
+      errorMessage.slideDown(500);
+      errorMessage.text('Don\'t try to submit a empty tweet 🙄');
       return false;
     }
     if (formText.length > 140) {
-      alert('Your tweet is wayyyyyy too long 😓');
+      errorMessage.slideDown(500);
+      errorMessage.text('Your tweet is wayyyyyy too long 😓');
       return false;
     }
+    errorMessage.slideUp(500);
     return true;
   };
 
