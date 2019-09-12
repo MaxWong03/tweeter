@@ -1,11 +1,16 @@
 @media only screen and (min-width: 1024px) {
 
+  nav{
+    background-color:rgb(238, 209, 192);
+  }
+
  body {
    display: flex;
  } 
 
  header {
   place-self: flex-start;
+  border-radius: 50px;
  }
 
 header#profile{

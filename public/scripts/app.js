@@ -86,7 +86,8 @@ $(() => {
         method: "POST",
         data: form.serialize()
       }).then(() => {
-        textArea.val(''); //here
+        textArea.val('');
+        form.children('.counter').text('140');
         loadTweets();
       });
     }
