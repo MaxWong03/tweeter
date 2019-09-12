@@ -20,7 +20,7 @@ textarea {
 }
 
 textarea:focus {
-  background: none;
+  outline: none;
 }
 
 .new-tweet{
