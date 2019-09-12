@@ -19,18 +19,21 @@ textarea {
   font-weight: 600;
 }
 
-
-
-.counter, [type="submit"] {
-  position: absolute;
-  margin-top: 75px;
+textarea:focus {
+  background: none;
 }
 
+.new-tweet{
+  margin-bottom: 100px;
+}
+
+
 .counter {
-  right: 0;
+  float: right;
+  margin-top: 15px;
 }
 
 [type="submit"] {
-  left: 0;
   border: none;
+  margin-top: 15px;
 }

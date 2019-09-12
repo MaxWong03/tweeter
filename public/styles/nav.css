@@ -24,5 +24,13 @@ nav span {
 .fa-angle-double-down {
   margin-right: 170px;
   color: rgba(255, 166, 0, 0.829);
+  animation-name: upDown;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
 }
 
+@keyframes upDown {
+  0% {margin-top: 0px;}
+  50% {margin-top: 18px;}
+  100% {margin-top: 0px;}
+}
