@@ -4,21 +4,24 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(() => {
-  
+  const toggleErrorMessage = (jqErrorMess, error) => { //test this
+    if (error === 'empty') {
+      jqErrorMess.slideDown(500).text('Don\'t try to submit a empty tweet 🙄');
+      return false;
+    }
+    if (error === 'length') {
+      jqErrorMess.slideDown(500).text('Your tweet is wayyyyyy too long 😓');
+      return false;
+    }
+    jqErrorMess.slideUp(500);
+    return true;
+  };
+
   const validateForm = (formText) => {
     const errorMessage = $('.error');
-    if (!formText.length) {
-      errorMessage.slideDown(500);
-      errorMessage.text('Don\'t try to submit a empty tweet 🙄');
-      return false;
-    }
-    if (formText.length > 140) {
-      errorMessage.slideDown(500);
-      errorMessage.text('Your tweet is wayyyyyy too long 😓');
-      return false;
-    }
-    errorMessage.slideUp(500);
-    return true;
+    if (!formText.length) return toggleErrorMessage(errorMessage, 'empty');
+    if (formText.length > 140) return toggleErrorMessage(errorMessage, 'length');
+    return toggleErrorMessage(errorMessage, null);
   };
 
   const renderTweets = (tweets) => {
@@ -30,22 +33,20 @@ $(() => {
     $('#tweet-container').empty().append(tweetArr);
   };
 
-  const createTweetElement = (tweetObj) => {
+  const makeHTML = (tweetObj, option) => {
     const { name, avatars, handle } = tweetObj.user;
-    const { text } = tweetObj.content;
     const timeStamp = tweetObj.created_at;
     const gender = tweetObj.gender;
-    const article = $(`<article class="${gender}">`);
-    const header =
-      `<header class="${gender}">
+    if (option === 'header') {
+      return `<header class="${gender}">
       <img class="avatar light" src=${avatars}>
       <div class="userInfo">
         <span class="light">${name}</span>
         <small class="user-handle hide">${handle}</small>
       </div>
     </header>`;
-    const footer =
-      `<footer >
+    }
+    return  `<footer >
     <small class="light ${gender}">${Math.round((Date.now() - new Date(timeStamp)) / (1000 * 60 * 60 * 24))} Days Ago</small>
     <span class="reaction light ${gender}">
       <i class="fas fa-flag"></i>
@@ -54,6 +55,15 @@ $(() => {
 
     </span>
     </footer>`;
+  };
+
+
+  const createTweetElement = (tweetObj) => {
+    const { text } = tweetObj.content;
+    const gender = tweetObj.gender;
+    const article = $(`<article class="${gender}">`);
+    const header = makeHTML(tweetObj, 'header');
+    const footer = makeHTML(tweetObj, 'footer');
     const tweetContainer = $('<div>').addClass('tweet-text');
     const tweetText = $('<p>').addClass('light').text(text);
     return article.addClass('tweet').append(header, tweetContainer.append(tweetText.addClass(gender)), footer);
@@ -69,13 +79,14 @@ $(() => {
   const form = $('form');
   form.on('submit', (event) => {
     event.preventDefault();
-    const typedText = form.children('textarea').val();
+    const textArea = form.children('textarea'); //test this
+    const typedText = textArea.val(); //here
     if (validateForm(typedText)) {
       $.ajax('/tweets', {
         method: "POST",
         data: form.serialize()
       }).then(() => {
-        form.children('textarea').val('');
+        textArea.val(''); //here
         loadTweets();
       });
     }
