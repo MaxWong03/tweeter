@@ -7,8 +7,11 @@ input, span {
 }
 
 input {
-  background-color: #4056A1;
+  background-color: rgb(166, 169, 201);
   color: #ffffff;
+}
+input:hover{
+  cursor: pointer;
 }
 
 textarea {
@@ -17,7 +20,7 @@ textarea {
   border-right: none;
   border-left: none;
   resize: none;
-  background-color: #f4f1ec;
+  background-color: #EEE8F9;
   width: 100%;
   height: 55px;
   font-weight: 600;
