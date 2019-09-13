@@ -7,8 +7,16 @@ This app was built to practice HTML, CSS, SASS, JS, jQuery and AJAX front-end sk
 This app has a responsive layout that supports Tablet and Desktop devices
 
 # Final Product
+
+## Responsive Design
+
+### Desktop Layout
 !["Desktop Layout"](https://github.com/MaxWong03/tweeter/blob/master/docs/desktop.gif)
+
+### Tablet Layout
 !["Tablet Layout"](https://github.com/MaxWong03/tweeter/blob/master/docs/tablet.gif)
+
+### App Functionality
 !["Buttons Functionality"](https://github.com/MaxWong03/tweeter/blob/master/docs/button.gif)
 !["Submitting Tweets"](https://github.com/MaxWong03/tweeter/blob/master/docs/tablet.gif)
 
