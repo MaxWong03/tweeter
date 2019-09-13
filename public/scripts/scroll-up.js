@@ -16,7 +16,6 @@ $(() => {
   const makeTweetText = $('#make-tweet');
   const downArrow = $('.fa-angle-double-down');
   browser.scroll(() => {
-    console.log(browser.scrollTop());
     if (browser.scrollTop() >= 400) toggleNav(makeTweetText, downArrow, scrollUp, 'show');
     else toggleNav(makeTweetText, downArrow, scrollUp, 'hide');
     
