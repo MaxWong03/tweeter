@@ -54,3 +54,6 @@ This app has a `responsive` layout that supports **Tablet** and **Desktop** devi
 
 - `SASS`
 - `Nodemon`
+
+## Known Issues
+1) Database to be implemented
