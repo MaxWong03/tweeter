@@ -22,7 +22,7 @@ This app has a `responsive` layout that supports **Tablet** and **Desktop** devi
 !["Buttons Functionality"](https://github.com/MaxWong03/tweeter/blob/master/docs/button.gif)
 
 ### Tweet Submission
-!["Submitting Tweets"](https://github.com/MaxWong03/tweeter/blob/master/docs/tablet.gif)
+!["Submitting Tweets"](https://github.com/MaxWong03/tweeter/blob/master/docs/subTweet.gif)
 
 ## General Features
 
