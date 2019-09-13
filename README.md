@@ -10,7 +10,7 @@ This app has a responsive layout that supports Tablet and Desktop devices
 !["Desktop Layout"](https://github.com/MaxWong03/tweeter/blob/master/docs/desktop.gif)
 !["Tablet Layout"](https://github.com/MaxWong03/tweeter/blob/master/docs/tablet.gif)
 !["Buttons Functionality"](https://github.com/MaxWong03/tweeter/blob/master/docs/button.gif)
-!["Submitting Tweets"]()
+!["Submitting Tweets"](https://github.com/MaxWong03/tweeter/blob/master/docs/tablet.gif)
 
 ## General Features
 
