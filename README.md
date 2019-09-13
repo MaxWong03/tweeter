@@ -8,7 +8,8 @@ This app has a responsive layout that supports Tablet and Desktop devices
 
 # Final Product
 !["Desktop Layout"](https://github.com/MaxWong03/tweeter/blob/master/docs/desktop.gif)
-!["Tablet Layout"]()
+!["Tablet Layout"](https://github.com/MaxWong03/tweeter/blob/master/docs/tablet.gif)
+!["Buttons Functionality"](https://github.com/MaxWong03/tweeter/blob/master/docs/button.gif)
 !["Submitting Tweets"]()
 
 ## General Features
@@ -18,6 +19,7 @@ This app has a responsive layout that supports Tablet and Desktop devices
    
 ## UX Features
 1) Tweets are of different style based on tweets' owner's genders
+!["style"](https://github.com/MaxWong03/tweeter/blob/master/docs/genderStyle.png)
 2) Users can hide or show tweet submission form by clicking an animated button
 3) Users are able to scroll back to the top of the page by clicking a helper button 
 
