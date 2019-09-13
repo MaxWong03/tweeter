@@ -18,10 +18,10 @@ This app has a `responsive` layout that supports **Tablet** and **Desktop** devi
 
 ### App Functionality
 
-### Toggle Submission Form
+### Toggle Submission Form / Webpage Redirection
 !["Buttons Functionality"](https://github.com/MaxWong03/tweeter/blob/master/docs/button.gif)
 
-### Webpage Redirection
+### Tweet Submission
 !["Submitting Tweets"](https://github.com/MaxWong03/tweeter/blob/master/docs/tablet.gif)
 
 ## General Features
