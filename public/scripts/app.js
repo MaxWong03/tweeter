@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(() => {
-  const toggleErrorMessage = (jqErrorMess, error) => { //test this
+  const toggleErrorMessage = (jqErrorMess, error) => {
     if (error === 'empty') {
       jqErrorMess.slideDown(500).text('Don\'t try to submit a empty tweet 🙄');
       return false;
@@ -79,8 +79,8 @@ $(() => {
   const form = $('form');
   form.on('submit', (event) => {
     event.preventDefault();
-    const textArea = form.children('textarea'); //test this
-    const typedText = textArea.val(); //here
+    const textArea = form.children('textarea');
+    const typedText = textArea.val();
     if (validateForm(typedText)) {
       $.ajax('/tweets', {
         method: "POST",

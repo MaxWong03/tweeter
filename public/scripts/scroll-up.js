@@ -1,5 +1,5 @@
 $(() => {
-  const toggleNav = (jqMakeTweet, jqDownArrow, jqScrollUp, action) => { //have to test this
+  const toggleNav = (jqMakeTweet, jqDownArrow, jqScrollUp, action) => {
     if (action === 'show') {
       jqScrollUp.fadeIn(500);
       jqMakeTweet.fadeOut(500);
@@ -17,8 +17,8 @@ $(() => {
   const downArrow = $('.fa-angle-double-down');
   browser.scroll(() => {
     console.log(browser.scrollTop());
-    if (browser.scrollTop() >= 400) toggleNav(makeTweetText, downArrow, scrollUp, 'show'); //here
-    else toggleNav(makeTweetText, downArrow, scrollUp, 'hide'); //here
+    if (browser.scrollTop() >= 400) toggleNav(makeTweetText, downArrow, scrollUp, 'show');
+    else toggleNav(makeTweetText, downArrow, scrollUp, 'hide');
     
   });
   scrollUp.on('click', () => {
