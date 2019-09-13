@@ -2,9 +2,9 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This app was built to practice HTML, CSS, SASS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+This app was built to practice `HTML`, `CSS`, `SASS`, `JS`, `jQuery` and `AJAX` front-end skills, and their `Node`, `Express` and `MongoDB` back-end skills.
 
-This app has a responsive layout that supports Tablet and Desktop devices
+This app has a `responsive` layout that supports **Tablet** and **Desktop** devices
 
 # Final Product
 
@@ -17,7 +17,11 @@ This app has a responsive layout that supports Tablet and Desktop devices
 !["Tablet Layout"](https://github.com/MaxWong03/tweeter/blob/master/docs/tablet.gif)
 
 ### App Functionality
+
+### Toggle Submission Form
 !["Buttons Functionality"](https://github.com/MaxWong03/tweeter/blob/master/docs/button.gif)
+
+### Webpage Redirection
 !["Submitting Tweets"](https://github.com/MaxWong03/tweeter/blob/master/docs/tablet.gif)
 
 ## General Features
@@ -40,13 +44,13 @@ This app has a responsive layout that supports Tablet and Desktop devices
 
 ## Dependencies
 
-- Express
-- Node 5.10.x or above
-- Body-parser
-- Chance
-- md5
+- `Express`
+- `Node` 5.10.x or above
+- `Body-parser`
+- `Chance`
+- `md5`
 
 ## Dev Dependencies
 
--SASS
--Nodemon
+- `SASS`
+- `Nodemon`
